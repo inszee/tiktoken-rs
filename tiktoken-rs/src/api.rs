@@ -340,7 +340,7 @@ pub mod async_openai {
             Self {
                 role: m.role.to_string(),
                 name: m.name.clone(),
-                content: m.content.clone(),
+                content: m.content.clone().unwrap_or("".to_string()),
             }
         }
     }
